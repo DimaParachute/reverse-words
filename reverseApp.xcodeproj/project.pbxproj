@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F362651627007C96003D12A3 /* reverseAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362651527007C96003D12A3 /* reverseAppTests.swift */; };
+		F362652427007D1B003D12A3 /* reverseAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362652327007D1B003D12A3 /* reverseAppUITests.swift */; };
 		F383FDF526ECDF3B00C79033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383FDF426ECDF3B00C79033 /* AppDelegate.swift */; };
 		F383FDF726ECDF3B00C79033 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383FDF626ECDF3B00C79033 /* SceneDelegate.swift */; };
 		F383FDF926ECDF3B00C79033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383FDF826ECDF3B00C79033 /* ViewController.swift */; };
@@ -15,7 +17,30 @@
 		F383FE0126ECDF3D00C79033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F383FDFF26ECDF3D00C79033 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F362651827007C96003D12A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F383FDE926ECDF3B00C79033 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F383FDF026ECDF3B00C79033;
+			remoteInfo = reverseApp;
+		};
+		F362652627007D1B003D12A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F383FDE926ECDF3B00C79033 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F383FDF026ECDF3B00C79033;
+			remoteInfo = reverseApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		F362651327007C96003D12A3 /* reverseAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reverseAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F362651527007C96003D12A3 /* reverseAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reverseAppTests.swift; sourceTree = "<group>"; };
+		F362651727007C96003D12A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F362652127007D1B003D12A3 /* reverseAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reverseAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F362652327007D1B003D12A3 /* reverseAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reverseAppUITests.swift; sourceTree = "<group>"; };
+		F362652527007D1B003D12A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F383FDF126ECDF3B00C79033 /* reverseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reverseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F383FDF426ECDF3B00C79033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F383FDF626ECDF3B00C79033 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +52,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F362651027007C96003D12A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F362651E27007D1B003D12A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F383FDEE26ECDF3B00C79033 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +76,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F362651427007C96003D12A3 /* reverseAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F362651527007C96003D12A3 /* reverseAppTests.swift */,
+				F362651727007C96003D12A3 /* Info.plist */,
+			);
+			path = reverseAppTests;
+			sourceTree = "<group>";
+		};
+		F362652227007D1B003D12A3 /* reverseAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F362652327007D1B003D12A3 /* reverseAppUITests.swift */,
+				F362652527007D1B003D12A3 /* Info.plist */,
+			);
+			path = reverseAppUITests;
+			sourceTree = "<group>";
+		};
 		F383FDE826ECDF3B00C79033 = {
 			isa = PBXGroup;
 			children = (
 				F383FDF326ECDF3B00C79033 /* reverseApp */,
+				F362651427007C96003D12A3 /* reverseAppTests */,
+				F362652227007D1B003D12A3 /* reverseAppUITests */,
 				F383FDF226ECDF3B00C79033 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				F383FDF126ECDF3B00C79033 /* reverseApp.app */,
+				F362651327007C96003D12A3 /* reverseAppTests.xctest */,
+				F362652127007D1B003D12A3 /* reverseAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +131,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F362651227007C96003D12A3 /* reverseAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F362651C27007C96003D12A3 /* Build configuration list for PBXNativeTarget "reverseAppTests" */;
+			buildPhases = (
+				F362650F27007C96003D12A3 /* Sources */,
+				F362651027007C96003D12A3 /* Frameworks */,
+				F362651127007C96003D12A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F362651927007C96003D12A3 /* PBXTargetDependency */,
+			);
+			name = reverseAppTests;
+			productName = reverseAppTests;
+			productReference = F362651327007C96003D12A3 /* reverseAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F362652027007D1B003D12A3 /* reverseAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F362652827007D1B003D12A3 /* Build configuration list for PBXNativeTarget "reverseAppUITests" */;
+			buildPhases = (
+				F362651D27007D1B003D12A3 /* Sources */,
+				F362651E27007D1B003D12A3 /* Frameworks */,
+				F362651F27007D1B003D12A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F362652727007D1B003D12A3 /* PBXTargetDependency */,
+			);
+			name = reverseAppUITests;
+			productName = reverseAppUITests;
+			productReference = F362652127007D1B003D12A3 /* reverseAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F383FDF026ECDF3B00C79033 /* reverseApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F383FE0526ECDF3D00C79033 /* Build configuration list for PBXNativeTarget "reverseApp" */;
@@ -96,6 +193,14 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					F362651227007C96003D12A3 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F383FDF026ECDF3B00C79033;
+					};
+					F362652027007D1B003D12A3 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F383FDF026ECDF3B00C79033;
+					};
 					F383FDF026ECDF3B00C79033 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -115,11 +220,27 @@
 			projectRoot = "";
 			targets = (
 				F383FDF026ECDF3B00C79033 /* reverseApp */,
+				F362651227007C96003D12A3 /* reverseAppTests */,
+				F362652027007D1B003D12A3 /* reverseAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F362651127007C96003D12A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F362651F27007D1B003D12A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F383FDEF26ECDF3B00C79033 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,6 +254,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F362650F27007C96003D12A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F362651627007C96003D12A3 /* reverseAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F362651D27007D1B003D12A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F362652427007D1B003D12A3 /* reverseAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F383FDED26ECDF3B00C79033 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,6 +281,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F362651927007C96003D12A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F383FDF026ECDF3B00C79033 /* reverseApp */;
+			targetProxy = F362651827007C96003D12A3 /* PBXContainerItemProxy */;
+		};
+		F362652727007D1B003D12A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F383FDF026ECDF3B00C79033 /* reverseApp */;
+			targetProxy = F362652627007D1B003D12A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F383FDFA26ECDF3B00C79033 /* Main.storyboard */ = {
@@ -165,6 +315,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F362651A27007C96003D12A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = reverseAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DimaParachute.reverseAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reverseApp.app/reverseApp";
+			};
+			name = Debug;
+		};
+		F362651B27007C96003D12A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = reverseAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DimaParachute.reverseAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reverseApp.app/reverseApp";
+			};
+			name = Release;
+		};
+		F362652927007D1B003D12A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = reverseAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DimaParachute.reverseAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = reverseApp;
+			};
+			name = Debug;
+		};
+		F362652A27007D1B003D12A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = reverseAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DimaParachute.reverseAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = reverseApp;
+			};
+			name = Release;
+		};
 		F383FE0326ECDF3D00C79033 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -320,6 +544,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F362651C27007C96003D12A3 /* Build configuration list for PBXNativeTarget "reverseAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F362651A27007C96003D12A3 /* Debug */,
+				F362651B27007C96003D12A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F362652827007D1B003D12A3 /* Build configuration list for PBXNativeTarget "reverseAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F362652927007D1B003D12A3 /* Debug */,
+				F362652A27007D1B003D12A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F383FDEC26ECDF3B00C79033 /* Build configuration list for PBXProject "reverseApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
