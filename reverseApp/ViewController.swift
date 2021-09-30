@@ -14,17 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var resultButton: UIButton!
     @IBOutlet weak var reversedText: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        reversedText.alpha = 0.0     // First UILabel must be invisible
+        reversedText.alpha = 0.0     // first UILabel must be invisible
     }
     
     // MARK: - IBActions
     
     @IBAction func resultButtonPressed(_ sender: UIButton) {
-        reversedText.text = textField.text!.split(separator: " ").map { String($0.reversed())}.joined(separator: " ")
-        reversedText.alpha = 1.0    // Text appears
+        let sentence = reverserClass(sentence: textField.text!)   // sentence is a class object
+        reversedText.text = sentence.reverseFunc(sentence: textField.text!)
+        reversedText.alpha = 1.0    // text appears
     }
     
 }

@@ -6,9 +6,8 @@
 //
 
 import XCTest
-
+@testable import reverseApp
 class reverseAppTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -16,10 +15,10 @@ class reverseAppTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
     func testReverseWords() throws {
-        let exampleString = "Test string"
-        let resultOfFunc = exampleString.split(separator: " ").map { String($0.reversed())}.joined(separator: " ")
+        let helper = "Test string"
+        let reverser = reverserClass(sentence: helper)
+        let resultOfFunc = reverser.reverseFunc(sentence: helper)
         XCTAssert(resultOfFunc == "tseT gnirts")
     }
 
