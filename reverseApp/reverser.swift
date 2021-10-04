@@ -7,12 +7,12 @@
 
 import Foundation
 
-class reverserClass {
+class stringsWizard {
     var sentence: String       //Variable which contains text to reverse
     init(sentence: String) {
         self.sentence = sentence
     }
-    func reverseFunc(sentence: String) -> String {
+    func reverse(sentence: String) -> String {
         return sentence.split(separator: " ").map { String($0.reversed())}.joined(separator: " ")
     }
 }

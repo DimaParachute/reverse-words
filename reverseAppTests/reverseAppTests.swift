@@ -17,8 +17,8 @@ class reverseAppTests: XCTestCase {
     }
     func testReverseWords() throws {
         let helper = "Test string"
-        let reverser = reverserClass(sentence: helper)
-        let resultOfFunc = reverser.reverseFunc(sentence: helper)
+        let reverser = stringsWizard(sentence: helper)
+        let resultOfFunc = reverser.reverse(sentence: helper)
         XCTAssert(resultOfFunc == "tseT gnirts")
     }
 

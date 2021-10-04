@@ -47,7 +47,7 @@ class reverseAppUITests: XCTestCase {
         tKey.tap()
         app/*@START_MENU_TOKEN@*/.staticTexts["Result"]/*[[".buttons[\"Result\"].staticTexts[\"Result\"]",".staticTexts[\"Result\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-        
+        XCTAssert(app.staticTexts["tset tset"].exists)
     }
 
 }

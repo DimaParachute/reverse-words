@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func resultButtonPressed(_ sender: UIButton) {
-        let sentence = reverserClass(sentence: textField.text!)   // sentence is a class object
-        reversedText.text = sentence.reverseFunc(sentence: textField.text!)
+        let sentence = stringsWizard(sentence: textField.text!)   // sentence is a class object
+        reversedText.text = sentence.reverse(sentence: textField.text!)
         reversedText.alpha = 1.0    // text appears
     }
     
