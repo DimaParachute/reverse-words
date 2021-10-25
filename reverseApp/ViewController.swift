@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     private let exceptionWordViewController = ExceptionWordViewController()
-    private var selectedSegment = 0
+    public var selectedSegment = 0 // state of segmentedControl
     
     // MARK: - IBOutlets
     
@@ -28,20 +28,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reversedText.alpha = 0.0     // first UILabel must be invisible
-        //segmentControl.addTarget(self, action: "segmentChanged:", for: .valueChanged)
         fieldContainerView.backgroundColor = UIColor.white // makes superview for ignore textField invisible
         resultButton.layer.cornerRadius = 10 // makes corners rounded
     }
-    
+
     // MARK: - IBActions
     
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
+            reversedText.text = ""
+            reversedText.alpha = 0.0
             infoLabel.alpha = 1
             exceptionWordViewController.view.removeFromSuperview()
             selectedSegment = 0
         } else {
             infoLabel.alpha = 0
+            reversedText.text = ""
+            reversedText.alpha = 0.0
             if self.fieldContainerView.subviews.isEmpty {
                 self.fieldContainerView.addSubview(exceptionWordViewController.view)
             }
@@ -52,11 +55,14 @@ class ViewController: UIViewController {
     
     @IBAction func resultButtonPressed(_ sender: UIButton) {
         let sentence = StringsWizard(sentence: textField.text!)   // sentence is a class object
+        
         if selectedSegment == 0 {
-            reversedText.text = sentence.reverse(sentence: textField.text!)
+            reversedText.text = sentence.reverseWhenDefault(sentence: textField.text!)
             reversedText.alpha = 1.0    // text appears
         } else {
-            
+            let exceptionText = exceptionWordViewController.ignoreTextField.text
+            reversedText.text = sentence.reverseWhenCustom(sentence: textField.text!, ignoreText: exceptionText!)
+            reversedText.alpha = 1.0    // text appears
         }
     }
     
