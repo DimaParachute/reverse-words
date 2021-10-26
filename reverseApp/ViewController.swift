@@ -7,10 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     private let exceptionWordViewController = ExceptionWordViewController()
     public var selectedSegment = 0 // state of segmentedControl
+    
+    // MARK: - Styles
+    
+    private let defaultCornerRadius = 10
+    private let invisible = 0.0
+    private let visible = 1.0
     
     // MARK: - IBOutlets
     
@@ -20,16 +26,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var fieldContainerView: UIView! // a view that will contain xib element
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+    }*/
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        reversedText.alpha = 0.0     // first UILabel must be invisible
+        reversedText.alpha = CGFloat(invisible)     // first UILabel must be invisible
         fieldContainerView.backgroundColor = UIColor.white // makes superview for ignore textField invisible
-        resultButton.layer.cornerRadius = 10 // makes corners rounded
+        resultButton.layer.cornerRadius = CGFloat(defaultCornerRadius) // makes corners rounded
     }
 
     // MARK: - IBActions
@@ -37,14 +48,14 @@ class ViewController: UIViewController {
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             reversedText.text = ""
-            reversedText.alpha = 0.0
-            infoLabel.alpha = 1
+            reversedText.alpha = CGFloat(invisible)
+            infoLabel.alpha = CGFloat(visible)
             exceptionWordViewController.view.removeFromSuperview()
             selectedSegment = 0
         } else {
-            infoLabel.alpha = 0
+            infoLabel.alpha = CGFloat(invisible)
             reversedText.text = ""
-            reversedText.alpha = 0.0
+            reversedText.alpha = CGFloat(invisible)
             if self.fieldContainerView.subviews.isEmpty {
                 self.fieldContainerView.addSubview(exceptionWordViewController.view)
             }
@@ -58,11 +69,11 @@ class ViewController: UIViewController {
         
         if selectedSegment == 0 {
             reversedText.text = sentence.reverseWhenDefault(sentence: textField.text!)
-            reversedText.alpha = 1.0    // text appears
+            reversedText.alpha = CGFloat(visible)    // text appears
         } else {
             let exceptionText = exceptionWordViewController.ignoreTextField.text
             reversedText.text = sentence.reverseWhenCustom(sentence: textField.text!, ignoreText: exceptionText!)
-            reversedText.alpha = 1.0    // text appears
+            reversedText.alpha = CGFloat(visible)    // text appears
         }
     }
     

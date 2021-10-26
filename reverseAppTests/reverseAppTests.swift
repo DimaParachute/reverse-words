@@ -35,6 +35,16 @@ class reverseAppTests: XCTestCase {
         resultOfFunc = reverser.reverseWhenDefault(sentence: testExample)
         XCTAssert(resultOfFunc == "d1cba hgf!e")
         
+        testExample = "🤖🤓💩"
+        reverser = StringsWizard(sentence: testExample)
+        resultOfFunc = reverser.reverseWhenDefault(sentence: testExample)
+        XCTAssert(resultOfFunc == "🤖🤓💩")
+        
+        testExample = "-.;:#@"
+        reverser = StringsWizard(sentence: testExample)
+        resultOfFunc = reverser.reverseWhenDefault(sentence: testExample)
+        XCTAssert(resultOfFunc == "-.;:#@")
+        
     }
     
     func testReverseWordsWhenCustom() throws {
